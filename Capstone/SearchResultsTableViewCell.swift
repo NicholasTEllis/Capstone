@@ -10,15 +10,44 @@ import UIKit
 
 class SearchResultsTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var searchResultsImage: UIImageView!
+    
+    @IBOutlet weak var searchResultsTitleLabel: UILabel!
+    
+    @IBOutlet weak var searchResultsDescriptionLabel: UILabel!
+    
+    //// MARK: -Finish putting images in this lad
+    
+    func updateWith(tvShow: TVShow) {
+       // searchResultsImage.image = tvShow.posterPath
+        searchResultsTitleLabel.text = tvShow.originalTitle
+        searchResultsDescriptionLabel.text = tvShow.overview
+        
+        guard let poster = tvShow.posterPath else {
+            return
+        }
+        let baseURL = URL(string: "http://image.tmdb.org/t/p/w500/")
+        if let imageURL = baseURL?.appendingPathComponent(poster) {
+            
+            ImageController.image(forURL: imageURL) { (image) in
+                self.imageView?.image = image
+            }
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func updateWith(movie: Movie) {
+        searchResultsTitleLabel.text = movie.originalTitle
+        searchResultsDescriptionLabel.text = movie.overview
+        guard let poster = movie.posterPath else {
+            return
+        }
+        let baseURL = URL(string: "http://image.tmdb.org/t/p/w500/")
+        if let imageURL = baseURL?.appendingPathComponent(poster) {
+            
+            ImageController.image(forURL: imageURL) { (image) in
+                self.imageView?.image = image
+            }
+        }
     }
-
 }
+

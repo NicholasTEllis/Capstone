@@ -10,6 +10,9 @@ import UIKit
 
 class TVShowDetailViewController: UIViewController {
 
+    @IBOutlet weak var tvShowTitleLabel: UILabel!
+    @IBOutlet weak var tvShowDescriptionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
