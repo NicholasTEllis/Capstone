@@ -27,6 +27,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Movie"/>
                                 <connections>
+                                    <action selector="movieButtonTapped:" destination="U1O-RW-yzJ" eventType="touchUpInside" id="s5M-m9-XLX"/>
                                     <segue destination="Kpe-3c-k8Q" kind="show" identifier="movieButtonClickedSegue" id="GVB-U5-4hg"/>
                                 </connections>
                             </button>
@@ -35,6 +36,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="TVShow"/>
                                 <connections>
+                                    <action selector="tvShowButtonTapped:" destination="U1O-RW-yzJ" eventType="touchUpInside" id="WBm-xi-1pa"/>
                                     <segue destination="Kpe-3c-k8Q" kind="show" identifier="tvShowButtonClickedSegue" id="ger-be-aYl"/>
                                 </connections>
                             </button>
@@ -103,6 +105,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rwg-iC-xn0" id="3aS-Jc-by2"/>
+                                    <outlet property="delegate" destination="rwg-iC-xn0" id="9Ik-BO-k3c"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -145,6 +151,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="IaP-Xz-XX3" id="SKR-qX-O65"/>
+                                    <outlet property="delegate" destination="IaP-Xz-XX3" id="oq2-T8-gnv"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -171,7 +181,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="genreCell" rowHeight="50" id="adj-JM-rTi">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="genreCell" rowHeight="50" id="adj-JM-rTi" customClass="FilterChoicesTableViewCell" customModule="Capstone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="adj-JM-rTi" id="QLv-Kz-VUS">
@@ -201,8 +211,17 @@
                                                 <constraint firstAttribute="bottom" secondItem="ilj-LJ-oC1" secondAttribute="bottom" id="xqq-dc-VV9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="choiceButton" destination="ilj-LJ-oC1" id="iM2-rR-Fr6"/>
+                                            <outlet property="choiceButtonTapped" destination="ilj-LJ-oC1" id="b7w-kq-nSJ"/>
+                                            <outlet property="titleLabel" destination="E13-Pj-G1P" id="enf-wD-i2Y"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Kpe-3c-k8Q" id="vUI-4w-MiV"/>
+                                    <outlet property="delegate" destination="Kpe-3c-k8Q" id="ScM-Rx-YFu"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -216,6 +235,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="ygb-Mz-fcf" id="3An-Wm-4PX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAx-4h-Y08" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
