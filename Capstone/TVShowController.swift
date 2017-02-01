@@ -24,12 +24,13 @@ class TVShowController {
             }
             
             guard let returnedDictionary = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any],
-                let TVShowDictionary = returnedDictionary["results"] as? [[String: Any]] else {
+                let tvShowDictionary = returnedDictionary["results"] as? [[String: Any]] else {
                     NSLog("Could not parse json. \n Response: \(response)")
                     completion([])
                     return
             }
-            let tvShows = TVShowDictionary.flatMap { TVShow(json: $0) }
+            
+            let tvShows = tvShowDictionary.flatMap { TVShow(json: $0) }
             print(response)
             completion(tvShows)
         }
