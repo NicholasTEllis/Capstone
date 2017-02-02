@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 class GenreController {
     static let movieBaseURL = URL(string: "https://api.themoviedb.org/3/genre/movie/list")
     static let tvShowBaseURL = URL(string: "https://api.themoviedb.org/3/genre/tv/list")
-    
+        
     static func grabMovieGenreList(completion: @escaping ([Genre]) -> Void) {
         guard let url = movieBaseURL else {
             completion([])
@@ -21,6 +22,7 @@ class GenreController {
         let urlParameters = ["api_key" : "22c83f675542ad3f964cdc8a67271920"]
         
         NetworkController.performRequest(for: url, httpMethod: .Get, urlParameters: urlParameters, body: nil) { (data, error) in
+            
             guard let data = data, let response = String(data: data, encoding: .utf8) else {
                 NSLog("Could not recieve data")
                 completion([])
@@ -37,6 +39,7 @@ class GenreController {
             let movieGenres = genreDictionary.flatMap { Genre(jsonDictionary: $0) }
             print(response)
             completion(movieGenres)
+            
         }
     }
     

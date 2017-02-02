@@ -11,15 +11,7 @@ import UIKit
 class GenreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
-//    var movieGenres: [Genre] = [] {
-//        didSet {
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
-//        }
-//    }
-    
+        
     var genres: [Genre] = []
     
     override func viewDidLoad() {

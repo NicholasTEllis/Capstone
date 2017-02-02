@@ -11,44 +11,13 @@ import UIKit
 class HomeScreenViewController: UIViewController {
     
     var genres: [Genre] = []
-    var isSuccess: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if isSuccess == true {
-            if segue.identifier == "movieButtonClickedSegue" {
-                let vc = segue.destination as? GenreViewController
-                vc?.genres = genres
-            }
-            
-            if segue.identifier == "tvShowButtonClickedSegue" {
-                let vc = segue.destination as? GenreViewController
-                vc?.genres = genres
-            }
-        }
-    }
-    
-    @IBAction func movieButtonTapped(_ sender: Any) {
-        GenreController.grabMovieGenreList { (genre) in
-            self.genres = genre
-            self.isSuccess = true
-        }
-    }
-    
-    @IBAction func tvShowButtonTapped(_ sender: Any) {
-        GenreController.grabTVShowGenreList { (genre) in
-            self.genres = genre
-        }
-    }
-    
-    // Activity View
-    private func showActivityIndicator() -> UIView {
+    func showActivityIndicator() -> UIView {
         let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
         effectView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(effectView)
@@ -69,5 +38,36 @@ class HomeScreenViewController: UIViewController {
         return effectView
         
     }
+    
+    @IBAction func movieButtonTapped(_ sender: Any) {
+        let waitingView = showActivityIndicator()
+        view.addSubview(waitingView)
+        GenreController.grabMovieGenreList { (genre) in
+            defer {
+                DispatchQueue.main.async {
+                    waitingView.removeFromSuperview()
+                }
+            }
+            
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "toGenreScreen", sender: self)
+                self.genres = genre 
+            }
+        }
+    }
+    
+    @IBAction func tvShowButtonTapped(_ sender: Any) {
+        let waitingView = showActivityIndicator()
+        view.addSubview(waitingView)
+        GenreController.grabTVShowGenreList { (genre) in
+            self.genres = genre
+        }
+    }
+    
+    func networkSegue() {
+        
+    }
+    
+    // Activity View
     
 }
