@@ -12,8 +12,10 @@ import UIKit
 class GenreController {
     static let movieBaseURL = URL(string: "https://api.themoviedb.org/3/genre/movie/list")
     static let tvShowBaseURL = URL(string: "https://api.themoviedb.org/3/genre/tv/list")
+    static var genres: [Genre] = []
         
     static func grabMovieGenreList(completion: @escaping ([Genre]) -> Void) {
+        genres.removeAll()
         guard let url = movieBaseURL else {
             completion([])
             return
@@ -38,13 +40,15 @@ class GenreController {
             
             let movieGenres = genreDictionary.flatMap { Genre(jsonDictionary: $0) }
             print(response)
+            for i in movieGenres {
+                genres.append(i)
+            }
             completion(movieGenres)
-            
         }
     }
     
-    
     static func grabTVShowGenreList(completion: @escaping ([(Genre)]) -> Void) {
+        genres.removeAll()
         guard let url = tvShowBaseURL else {
             completion([])
             return
@@ -68,7 +72,11 @@ class GenreController {
             
             let tvShowGenres = genreDictionary.flatMap { Genre(jsonDictionary: $0) }
             print(response)
+            for i in tvShowGenres {
+                genres.append(i)
+            }
             completion(tvShowGenres)
+            
         }
     }
 }

@@ -231,7 +231,7 @@
                     <navigationItem key="navigationItem" title="Genre" id="jRK-4I-dfl">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="A8K-al-M3v">
                             <connections>
-                                <segue destination="rwg-iC-xn0" kind="show" id="8Ul-9n-jLx"/>
+                                <segue destination="rwg-iC-xn0" kind="show" identifier="toEraScene" id="PvC-Wn-7Yb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -14,6 +14,8 @@
 		8D102DE81E31DB3900A4BBC9 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D102DE71E31DB3900A4BBC9 /* NetworkController.swift */; };
 		8D85283F1E42408E00C235B6 /* GenreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85283E1E42408E00C235B6 /* GenreController.swift */; };
 		8D8528431E4258A100C235B6 /* FilterChoicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8528421E4258A100C235B6 /* FilterChoicesTableViewCell.swift */; };
+		8D8528451E43C42D00C235B6 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8528441E43C42D00C235B6 /* LoadingOverlay.swift */; };
+		8D8528471E43C9D200C235B6 /* Era.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8528461E43C9D200C235B6 /* Era.swift */; };
 		8DBAF6721E37FA8E00BD97FA /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBAF6711E37FA8E00BD97FA /* HomeScreenViewController.swift */; };
 		8DBAF6751E38176B00BD97FA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBAF6741E38176B00BD97FA /* Movie.swift */; };
 		8DBAF6771E38177100BD97FA /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBAF6761E38177100BD97FA /* TVShow.swift */; };
@@ -40,6 +42,8 @@
 		8D102DE71E31DB3900A4BBC9 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		8D85283E1E42408E00C235B6 /* GenreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreController.swift; sourceTree = "<group>"; };
 		8D8528421E4258A100C235B6 /* FilterChoicesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterChoicesTableViewCell.swift; sourceTree = "<group>"; };
+		8D8528441E43C42D00C235B6 /* LoadingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
+		8D8528461E43C9D200C235B6 /* Era.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Era.swift; sourceTree = "<group>"; };
 		8DBAF6711E37FA8E00BD97FA /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		8DBAF6741E38176B00BD97FA /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		8DBAF6761E38177100BD97FA /* TVShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			children = (
 				8DBAF6AE1E394F8800BD97FA /* SearchResultsTableViewCell.swift */,
 				8D8528421E4258A100C235B6 /* FilterChoicesTableViewCell.swift */,
+				8D8528441E43C42D00C235B6 /* LoadingOverlay.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				8DBAF6A71E391CF900BD97FA /* Genre.swift */,
 				8DBAF6741E38176B00BD97FA /* Movie.swift */,
 				8DBAF6761E38177100BD97FA /* TVShow.swift */,
+				8D8528461E43C9D200C235B6 /* Era.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8528471E43C9D200C235B6 /* Era.swift in Sources */,
 				8DE03A431E41364600B5DEE3 /* GenreViewController.swift in Sources */,
 				8DBAF6AF1E394F8800BD97FA /* SearchResultsTableViewCell.swift in Sources */,
 				8DBAF67E1E3817C400BD97FA /* TVShowController.swift in Sources */,
@@ -242,6 +249,7 @@
 				8DBAF6751E38176B00BD97FA /* Movie.swift in Sources */,
 				8D85283F1E42408E00C235B6 /* GenreController.swift in Sources */,
 				8DE03A471E41365F00B5DEE3 /* ResultsViewController.swift in Sources */,
+				8D8528451E43C42D00C235B6 /* LoadingOverlay.swift in Sources */,
 				8DE03A451E41364F00B5DEE3 /* EraViewController.swift in Sources */,
 				8DBAF6771E38177100BD97FA /* TVShow.swift in Sources */,
 				8DBAF6AA1E394C5100BD97FA /* SearchResultsTableViewController.swift in Sources */,
