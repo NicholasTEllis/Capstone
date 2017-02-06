@@ -17,7 +17,7 @@
                BlueprintIdentifier = "8D102DD11E31DB0A00A4BBC9"
                BuildableName = "Capstone.app"
                BlueprintName = "Capstone"
-               ReferencedContainer = "container:Capstone.xcodeproj">
+               ReferencedContainer = "container:Flix Finder.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "8D102DD11E31DB0A00A4BBC9"
             BuildableName = "Capstone.app"
             BlueprintName = "Capstone"
-            ReferencedContainer = "container:Capstone.xcodeproj">
+            ReferencedContainer = "container:Flix Finder.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "8D102DD11E31DB0A00A4BBC9"
             BuildableName = "Capstone.app"
             BlueprintName = "Capstone"
-            ReferencedContainer = "container:Capstone.xcodeproj">
+            ReferencedContainer = "container:Flix Finder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "8D102DD11E31DB0A00A4BBC9"
             BuildableName = "Capstone.app"
             BlueprintName = "Capstone"
-            ReferencedContainer = "container:Capstone.xcodeproj">
+            ReferencedContainer = "container:Flix Finder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

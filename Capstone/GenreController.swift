@@ -10,10 +10,16 @@ import Foundation
 import UIKit
 
 class GenreController {
+    
+    static let shared = GenreController()
     static let movieBaseURL = URL(string: "https://api.themoviedb.org/3/genre/movie/list")
     static let tvShowBaseURL = URL(string: "https://api.themoviedb.org/3/genre/tv/list")
+    static let tvShowDiscoveryURL = URL(string: "https://api.themoviedb.org/3/discover/tv")
+    
     static var genres: [Genre] = []
-        
+    static var genreRowIDs: [Int] = []
+    
+    //Handling grabbing the pulling of the genres off the api
     static func grabMovieGenreList(completion: @escaping ([Genre]) -> Void) {
         genres.removeAll()
         guard let url = movieBaseURL else {
@@ -79,4 +85,8 @@ class GenreController {
             
         }
     }
+    
+    //Handling pulling the final movie/tv shows for the results 
+    
+        
 }

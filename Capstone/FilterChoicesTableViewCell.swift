@@ -9,12 +9,11 @@
 import UIKit
 
 class FilterChoicesTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var choiceButtonTapped: UIButton!
-    @IBOutlet weak var choiceButton: UIButton!
     
     func updateWith(genre: Genre) {
         titleLabel.text = genre.name
     }
 }
+

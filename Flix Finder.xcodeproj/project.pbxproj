@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8D102DD61E31DB0A00A4BBC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D102DD51E31DB0A00A4BBC9 /* AppDelegate.swift */; };
-		8D102DDB1E31DB0A00A4BBC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D102DD91E31DB0A00A4BBC9 /* Main.storyboard */; };
 		8D102DDD1E31DB0A00A4BBC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D102DDC1E31DB0A00A4BBC9 /* Assets.xcassets */; };
 		8D102DE01E31DB0A00A4BBC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D102DDE1E31DB0A00A4BBC9 /* LaunchScreen.storyboard */; };
 		8D102DE81E31DB3900A4BBC9 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D102DE71E31DB3900A4BBC9 /* NetworkController.swift */; };
 		8D85283F1E42408E00C235B6 /* GenreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D85283E1E42408E00C235B6 /* GenreController.swift */; };
 		8D8528431E4258A100C235B6 /* FilterChoicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8528421E4258A100C235B6 /* FilterChoicesTableViewCell.swift */; };
 		8D8528451E43C42D00C235B6 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8528441E43C42D00C235B6 /* LoadingOverlay.swift */; };
-		8D8528471E43C9D200C235B6 /* Era.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8528461E43C9D200C235B6 /* Era.swift */; };
+		8DB3F0221E43F22A00C223AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB3F0211E43F22A00C223AA /* Main.storyboard */; };
 		8DBAF6721E37FA8E00BD97FA /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBAF6711E37FA8E00BD97FA /* HomeScreenViewController.swift */; };
 		8DBAF6751E38176B00BD97FA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBAF6741E38176B00BD97FA /* Movie.swift */; };
 		8DBAF6771E38177100BD97FA /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBAF6761E38177100BD97FA /* TVShow.swift */; };
@@ -28,14 +27,12 @@
 		8DBAF6B31E39601C00BD97FA /* TVShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBAF6B21E39601C00BD97FA /* TVShowDetailViewController.swift */; };
 		8DBAF6B51E39602600BD97FA /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBAF6B41E39602600BD97FA /* MovieDetailViewController.swift */; };
 		8DE03A431E41364600B5DEE3 /* GenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE03A421E41364600B5DEE3 /* GenreViewController.swift */; };
-		8DE03A451E41364F00B5DEE3 /* EraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE03A441E41364F00B5DEE3 /* EraViewController.swift */; };
 		8DE03A471E41365F00B5DEE3 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE03A461E41365F00B5DEE3 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8D102DD21E31DB0A00A4BBC9 /* Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D102DD51E31DB0A00A4BBC9 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D102DDA1E31DB0A00A4BBC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D102DDC1E31DB0A00A4BBC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D102DDF1E31DB0A00A4BBC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D102DE11E31DB0A00A4BBC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,7 +40,7 @@
 		8D85283E1E42408E00C235B6 /* GenreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreController.swift; sourceTree = "<group>"; };
 		8D8528421E4258A100C235B6 /* FilterChoicesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterChoicesTableViewCell.swift; sourceTree = "<group>"; };
 		8D8528441E43C42D00C235B6 /* LoadingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
-		8D8528461E43C9D200C235B6 /* Era.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Era.swift; sourceTree = "<group>"; };
+		8DB3F0211E43F22A00C223AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8DBAF6711E37FA8E00BD97FA /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		8DBAF6741E38176B00BD97FA /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		8DBAF6761E38177100BD97FA /* TVShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
@@ -56,7 +53,6 @@
 		8DBAF6B21E39601C00BD97FA /* TVShowDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowDetailViewController.swift; sourceTree = "<group>"; };
 		8DBAF6B41E39602600BD97FA /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		8DE03A421E41364600B5DEE3 /* GenreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreViewController.swift; sourceTree = "<group>"; };
-		8DE03A441E41364F00B5DEE3 /* EraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EraViewController.swift; sourceTree = "<group>"; };
 		8DE03A461E41365F00B5DEE3 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +108,7 @@
 		8D102DEA1E31DB4F00A4BBC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8D102DD91E31DB0A00A4BBC9 /* Main.storyboard */,
+				8DB3F0211E43F22A00C223AA /* Main.storyboard */,
 				8D102DDC1E31DB0A00A4BBC9 /* Assets.xcassets */,
 				8D102DDE1E31DB0A00A4BBC9 /* LaunchScreen.storyboard */,
 				8D102DE11E31DB0A00A4BBC9 /* Info.plist */,
@@ -136,7 +132,6 @@
 				8DBAF6A71E391CF900BD97FA /* Genre.swift */,
 				8DBAF6741E38176B00BD97FA /* Movie.swift */,
 				8DBAF6761E38177100BD97FA /* TVShow.swift */,
-				8D8528461E43C9D200C235B6 /* Era.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -158,7 +153,6 @@
 				8DBAF6A91E394C5100BD97FA /* SearchResultsTableViewController.swift */,
 				8DBAF6711E37FA8E00BD97FA /* HomeScreenViewController.swift */,
 				8DE03A421E41364600B5DEE3 /* GenreViewController.swift */,
-				8DE03A441E41364F00B5DEE3 /* EraViewController.swift */,
 				8DE03A461E41365F00B5DEE3 /* ResultsViewController.swift */,
 				8DBAF6B21E39601C00BD97FA /* TVShowDetailViewController.swift */,
 				8DBAF6B41E39602600BD97FA /* MovieDetailViewController.swift */,
@@ -203,7 +197,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8D102DCD1E31DB0A00A4BBC9 /* Build configuration list for PBXProject "Capstone" */;
+			buildConfigurationList = 8D102DCD1E31DB0A00A4BBC9 /* Build configuration list for PBXProject "Flix Finder" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -226,9 +220,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB3F0221E43F22A00C223AA /* Main.storyboard in Resources */,
 				8D102DE01E31DB0A00A4BBC9 /* LaunchScreen.storyboard in Resources */,
 				8D102DDD1E31DB0A00A4BBC9 /* Assets.xcassets in Resources */,
-				8D102DDB1E31DB0A00A4BBC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +233,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D8528471E43C9D200C235B6 /* Era.swift in Sources */,
 				8DE03A431E41364600B5DEE3 /* GenreViewController.swift in Sources */,
 				8DBAF6AF1E394F8800BD97FA /* SearchResultsTableViewCell.swift in Sources */,
 				8DBAF67E1E3817C400BD97FA /* TVShowController.swift in Sources */,
@@ -250,7 +243,6 @@
 				8D85283F1E42408E00C235B6 /* GenreController.swift in Sources */,
 				8DE03A471E41365F00B5DEE3 /* ResultsViewController.swift in Sources */,
 				8D8528451E43C42D00C235B6 /* LoadingOverlay.swift in Sources */,
-				8DE03A451E41364F00B5DEE3 /* EraViewController.swift in Sources */,
 				8DBAF6771E38177100BD97FA /* TVShow.swift in Sources */,
 				8DBAF6AA1E394C5100BD97FA /* SearchResultsTableViewController.swift in Sources */,
 				8D8528431E4258A100C235B6 /* FilterChoicesTableViewCell.swift in Sources */,
@@ -265,14 +257,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8D102DD91E31DB0A00A4BBC9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8D102DDA1E31DB0A00A4BBC9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8D102DDE1E31DB0A00A4BBC9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -404,7 +388,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8D102DCD1E31DB0A00A4BBC9 /* Build configuration list for PBXProject "Capstone" */ = {
+		8D102DCD1E31DB0A00A4BBC9 /* Build configuration list for PBXProject "Flix Finder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D102DE21E31DB0A00A4BBC9 /* Debug */,

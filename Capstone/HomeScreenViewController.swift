@@ -15,10 +15,6 @@ class HomeScreenViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-    
     @IBAction func movieButtonTapped(_ sender: Any) {
         
         LoadingOverlay.shared.showOverlay(view: view)
@@ -45,10 +41,6 @@ class HomeScreenViewController: UIViewController {
                 self.performSegue(withIdentifier: "toGenreScreen", sender: self)
             }
         }
-    }
-    
-    func networkSegue() {
-        
     }
     
     // Activity View

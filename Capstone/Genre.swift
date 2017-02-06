@@ -15,6 +15,7 @@ class Genre {
     
     var id: Int?
     var name: String?
+    var isSelected: Bool = false
     
     init(id: Int, name: String) {
         self.id = id
