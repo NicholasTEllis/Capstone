@@ -70,7 +70,7 @@ class GenreViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         LoadingOverlay.shared.showOverlay(view: view)
-        MovieController.discoverMovies { (genre) in
+        MovieController.discoverMovies { (movie) in
             DispatchQueue.main.async {
                 LoadingOverlay.shared.hideOverlayView()
             }
