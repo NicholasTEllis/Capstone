@@ -14,7 +14,6 @@ class GenreController {
     static let shared = GenreController()
     static let movieBaseURL = URL(string: "https://api.themoviedb.org/3/genre/movie/list")
     static let tvShowBaseURL = URL(string: "https://api.themoviedb.org/3/genre/tv/list")
-    static let tvShowDiscoveryURL = URL(string: "https://api.themoviedb.org/3/discover/tv")
     
     static var genres: [Genre] = []
     static var genreRowIDs: [Int] = []
@@ -85,8 +84,4 @@ class GenreController {
             
         }
     }
-    
-    //Handling pulling the final movie/tv shows for the results 
-    
-        
 }

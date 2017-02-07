@@ -12,33 +12,62 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
 
     @IBOutlet weak var tableView: UITableView!
     
+    static var isMovie: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MovieController.movies.count
+        
+        if ResultsViewController.isMovie == true {
+            return MovieController.movies.count
+        } else if ResultsViewController.isMovie == false {
+            return TVShowController.tvShows.count
+        }
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultsCell", for: indexPath)
-        let movie = MovieController.movies[indexPath.row]
-        cell.textLabel?.text = movie.originalTitle
+        
+        if ResultsViewController.isMovie == true {
+            let movie = MovieController.movies[indexPath.row]
+            cell.textLabel?.text = movie.originalTitle
+            
+        } else if ResultsViewController.isMovie == false {
+            let tvShow = TVShowController.tvShows[indexPath.row]
+            cell.textLabel?.text = tvShow.originalTitle
+        }
         
         return cell 
     }
     
-
-    /*
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if ResultsViewController.isMovie == true {
+            performSegue(withIdentifier: "toMovieDetail", sender: self)
+        } else if ResultsViewController.isMovie == false {
+            performSegue(withIdentifier: "toTvShowDetail", sender: self)
+        }
+    }
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toMovieDetail" {
+            guard let index = tableView.indexPathForSelectedRow else { return }
+            let movie = MovieController.movies[index.row]
+            let movieVC = segue.destination as? MovieDetailViewController
+            movieVC?.movie = movie
+        }
+        
+        if segue.identifier == "toTvShowDetail" {
+            guard let index = tableView.indexPathForSelectedRow else { return }
+            let tvShow = TVShowController.tvShows[index.row]
+            let tvShowVC = segue.destination as? TVShowDetailViewController
+            tvShowVC?.tvShow = tvShow
+        }
     }
-    */
+ 
 
 }

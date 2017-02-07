@@ -13,15 +13,21 @@ class TVShowDetailViewController: UIViewController {
     @IBOutlet weak var tvShowTitleLabel: UILabel!
     @IBOutlet weak var tvShowDescriptionLabel: UILabel!
     
+    var tvShow: TVShow?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func updateWith() {
+        guard let tvShow = tvShow else {
+            return
+        }
+        
+        tvShowTitleLabel.text = tvShow.originalTitle
+        tvShowDescriptionLabel.text = tvShow.overview
     }
     
 

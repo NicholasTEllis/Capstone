@@ -93,6 +93,8 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="adQ-sQ-GVV" id="XzB-aW-E5Q"/>
+                        <segue destination="Zxj-3l-gwp" kind="show" identifier="toTvShowDetail" id="E2a-gn-CC6"/>
+                        <segue destination="RR3-9d-Rfo" kind="show" identifier="toMovieDetail" id="qWW-43-1sd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BoY-pJ-t3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -206,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dP-lE-Nza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3007" y="439"/>
+            <point key="canvasLocation" x="3162" y="635"/>
         </scene>
         <!--Movie Detail View Controller-->
         <scene sceneID="52d-XX-scy">
@@ -244,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Imy-Vs-Uq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3746" y="439"/>
+            <point key="canvasLocation" x="3854" y="-98"/>
         </scene>
         <!--Title-->
         <scene sceneID="Dsc-Jg-NhT">
@@ -333,15 +335,23 @@
                             <outlet property="delegate" destination="2Mb-T2-xrJ" id="3pL-co-bDQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="TJE-YH-sZw"/>
+                    <navigationItem key="navigationItem" title="Title" id="TJE-YH-sZw">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vdm-If-g0k">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="2Mb-T2-xrJ" id="AFq-Gm-kvM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBarTextField" destination="fqZ-fY-t8a" id="TEg-eQ-fNX"/>
                         <outlet property="segmentedControl" destination="LR1-I6-0IT" id="XpM-4K-EuO"/>
+                        <segue destination="Zxj-3l-gwp" kind="show" identifier="searchToTvShowDetail" id="N0P-44-FNC"/>
+                        <segue destination="RR3-9d-Rfo" kind="show" identifier="searchToMovieDetail" id="DaO-mK-aFz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPM-We-Jh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2097" y="439"/>
+            <point key="canvasLocation" x="1937" y="439"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xeg-8P-m8w">
@@ -380,4 +390,8 @@
             <point key="canvasLocation" x="1150" y="439"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DaO-mK-aFz"/>
+        <segue reference="N0P-44-FNC"/>
+    </inferredMetricsTieBreakers>
 </document>

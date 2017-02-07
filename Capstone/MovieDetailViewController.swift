@@ -13,16 +13,18 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieTitleLabel: UILabel!
     
     @IBOutlet weak var movieDecriptionLabel: UILabel!
+    
+    var movie: Movie?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateWith()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func updateWith() {
+        guard let movie = movie else { return }
+        movieTitleLabel.text = movie.originalTitle
+        movieDecriptionLabel.text = movie.overview
     }
     
 

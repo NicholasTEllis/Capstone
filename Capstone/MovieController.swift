@@ -15,6 +15,7 @@ class MovieController {
     static var movies: [Movie] = []
     
     static func searchMovies(query: String, completion: @escaping ([Movie]) -> Void) {
+        movies.removeAll()
         guard let url = baseURL else { completion([]); return }
         let urlParameters = ["api_key" : "22c83f675542ad3f964cdc8a67271920", "query": query]
         
@@ -31,8 +32,11 @@ class MovieController {
                 let moviesDictionary = returnedDictionary["results"] as? [[String: Any]] else { NSLog("Could not parse json. \n Response: \(response)"); completion([])
                     return }
             
-            let movies = moviesDictionary.flatMap { Movie(json: $0) }
+            let moviesSearch = moviesDictionary.flatMap { Movie(json: $0) }
             print(response)
+            for i in moviesSearch {
+                movies.append(i)
+            }
             completion(movies)
         }
     }

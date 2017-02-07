@@ -12,10 +12,13 @@ class HomeScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func movieButtonTapped(_ sender: Any) {
+        GenreController.genreRowIDs.removeAll()
+        GenreViewController.isMovie = true
+        ResultsViewController.isMovie = true 
         
         LoadingOverlay.shared.showOverlay(view: view)
         
@@ -30,6 +33,9 @@ class HomeScreenViewController: UIViewController {
     }
     
     @IBAction func tvShowButtonTapped(_ sender: Any) {
+        GenreController.genreRowIDs.removeAll()
+        GenreViewController.isMovie = false
+        ResultsViewController.isMovie = false
         
         LoadingOverlay.shared.showOverlay(view: view)
         
