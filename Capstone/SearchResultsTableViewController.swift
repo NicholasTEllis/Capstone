@@ -67,7 +67,6 @@ class SearchResultsTableViewController: UITableViewController, UISearchBarDelega
             MovieController.searchMovies(query: query, completion: { (movie) in
                 self.movieResults = movie
             })
-           // SearchResultsTableViewController.isMovie = true
         case 1:
             TVShowController.searchTVShow(query: query, completion: { (tvShow) in
                 self.tvShowResults = tvShow

@@ -13,11 +13,12 @@ class MovieController {
     static let baseURL = URL(string: "https://api.themoviedb.org/3/search/movie")
     static let movieDiscoveryURL = URL(string: "https://api.themoviedb.org/3/discover/movie")
     static var movies: [Movie] = []
+    static var pageNumber =  1 
     
     static func searchMovies(query: String, completion: @escaping ([Movie]) -> Void) {
         movies.removeAll()
         guard let url = baseURL else { completion([]); return }
-        let urlParameters = ["api_key" : "22c83f675542ad3f964cdc8a67271920", "query": query]
+        let urlParameters = ["api_key" : "22c83f675542ad3f964cdc8a67271920", "query": query, "page" : "\(pageNumber)"]
         
         NetworkController.performRequest(for: url, httpMethod: .Get, urlParameters: urlParameters, body: nil) { (data, error) in
             guard let data = data, let response = String(data: data, encoding: .utf8) else {

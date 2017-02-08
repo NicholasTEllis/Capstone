@@ -15,7 +15,11 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieDecriptionLabel: UILabel!
     
     var movie: Movie?
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        UINavigationBar.appearance().tintColor = UIColor(red: 202.0/255.0, green: 78.0/255.0, blue: 80.0/255.0, alpha: 1)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         updateWith()
