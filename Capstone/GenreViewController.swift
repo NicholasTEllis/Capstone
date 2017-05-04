@@ -10,6 +10,8 @@ import UIKit
 
 class GenreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //  MARK: - Properties 
+    
     @IBOutlet weak var tableView: UITableView!
     
     static var isMovie: Bool = false
@@ -21,6 +23,8 @@ class GenreViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    //  MARK: - Table View Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return GenreController.genres.count
@@ -71,6 +75,8 @@ class GenreViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.endUpdates()
     }
     
+    //  MARK: - Actions
+    
     @IBAction func nextButtonTapped(_ sender: Any) {
         
         if GenreViewController.isMovie == true {
@@ -95,5 +101,8 @@ class GenreViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
             
         }
+    }
+    @IBAction func backButtonTapped(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
     }
 }

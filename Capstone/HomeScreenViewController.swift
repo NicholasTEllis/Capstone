@@ -18,6 +18,8 @@ class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    //  MARK: - Actions 
+    
     @IBAction func movieButtonTapped(_ sender: Any) {
         GenreController.genreRowIDs.removeAll()
         GenreViewController.isMovie = true

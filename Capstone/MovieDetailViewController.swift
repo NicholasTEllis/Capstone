@@ -10,9 +10,11 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
     
-    @IBOutlet weak var movieTitleLabel: UILabel!
+    //  MARK: - Properties
     
+    @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var movieDecriptionLabel: UILabel!
+    @IBOutlet weak var movieImage: UIImageView!
     
     var movie: Movie?
     
@@ -31,15 +33,10 @@ class MovieDetailViewController: UIViewController {
         movieDecriptionLabel.text = movie.overview
     }
     
+    //  MARK: - Actions
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
-
 }

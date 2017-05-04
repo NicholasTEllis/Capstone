@@ -9,17 +9,14 @@
 import UIKit
 
 class SearchResultsTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var searchResultsImage: UIImageView!
-    
     @IBOutlet weak var searchResultsTitleLabel: UILabel!
-    
     @IBOutlet weak var searchResultsDescriptionLabel: UILabel!
     
-    //// MARK: -Finish putting images in this lad
+    
     
     func updateWith(tvShow: TVShow) {
-       // searchResultsImage.image = tvShow.posterPath
         searchResultsTitleLabel.text = tvShow.originalTitle
         searchResultsDescriptionLabel.text = tvShow.overview
         
@@ -30,7 +27,7 @@ class SearchResultsTableViewCell: UITableViewCell {
         if let imageURL = baseURL?.appendingPathComponent(poster) {
             
             ImageController.image(forURL: imageURL) { (image) in
-                self.imageView?.image = image
+                self.searchResultsImage?.image = image
             }
         }
     }
@@ -43,12 +40,11 @@ class SearchResultsTableViewCell: UITableViewCell {
         }
         let baseURL = URL(string: "http://image.tmdb.org/t/p/w500/")
         if let imageURL = baseURL?.appendingPathComponent(poster) {
-            
             ImageController.image(forURL: imageURL) { (image) in
-                self.imageView?.image = image
+               
+                self.searchResultsImage?.image = image
             }
         }
     }
-    
 }
 

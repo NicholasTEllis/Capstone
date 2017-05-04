@@ -10,13 +10,13 @@ import UIKit
 
 class SearchResultsTableViewController: UITableViewController, UISearchBarDelegate {
     
+    //  MARK: - Properties 
+    
     @IBOutlet weak var searchBarTextField: UISearchBar!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     static var isMovie: Bool = false
-    
-    var sourceTableViewController: UIViewController?
-    
+        
     var movieResults: [Movie] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -38,6 +38,8 @@ class SearchResultsTableViewController: UITableViewController, UISearchBarDelega
         searchBarTextField.delegate = self
     }
     
+    //  MARK: - Table View Data Source
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if segmentedControl.selectedSegmentIndex == 0 {
             return movieResults.count
@@ -54,11 +56,22 @@ class SearchResultsTableViewController: UITableViewController, UISearchBarDelega
             SearchResultsTableViewController.isMovie = true
         } else {
             let tvResult = tvShowResults[indexPath.row]
+            SearchResultsTableViewController.isMovie = false 
             cell.updateWith(tvShow: tvResult)
         }
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if SearchResultsTableViewController.isMovie == true {
+            performSegue(withIdentifier: "searchToMovieDetail", sender: self)
+        } else if SearchResultsTableViewController.isMovie == false {
+            performSegue(withIdentifier: "searchToTvShowDetail", sender: self)
+        }
+    }
+    
+    //  MARK: - Network Calls
     
     func makeNetworkCallBasedOnSelection() {
         guard let query = searchBarTextField.text else { return }
@@ -77,18 +90,15 @@ class SearchResultsTableViewController: UITableViewController, UISearchBarDelega
         }
     }
     
+    // MARK: - Search
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         makeNetworkCallBasedOnSelection()
         searchBarTextField.resignFirstResponder()
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if SearchResultsTableViewController.isMovie == true {
-            performSegue(withIdentifier: "searchToMovieDetail", sender: self)
-        } else if SearchResultsTableViewController.isMovie == false {
-            performSegue(withIdentifier: "searchToTvShowDetail", sender: self)
-        }
-    }
+    
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "searchToMovieDetail" {
@@ -106,6 +116,8 @@ class SearchResultsTableViewController: UITableViewController, UISearchBarDelega
         }
 
     }
+    
+    //  MARK: - Actions
     
     @IBAction func segmentedControlTapped(_ sender: Any) {
         makeNetworkCallBasedOnSelection()
